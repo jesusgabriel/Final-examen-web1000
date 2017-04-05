@@ -20,24 +20,28 @@ return "butts"}
 }
 
 5.Re-state the following expression without using negation: !(10 > x)
----10 > x
+---10 < x
 
 6.Re-state the following expression without using negation: !(a > 10 && b <= 5)
----a > 10 || b <= 5
+---a < 10 || b >= 5
 
 7.Re-state the following expression without using negation: !(!isLegal || !isFelony)
----(!isLegal || !isFelony)
+---(isLegal && isFelony)
 
 8.What is an Angular directive?
 ---Las directivas AngularJS son atributos HTML extendidos con el prefijo ng-. La directiva ng-app inicializa una aplicación AngularJS.La directiva ng-model vincula el valor de los controles HTML (input, select, textarea) a los datos de la aplicación.
 
 9.Write a functions which, given a 2-d array of strings, returns the concatenation of all the strings.
-
-      var name = ["Andy"];
-      var lastN = ["Melo"];
-      var arr = name.concat(" ",lastN);
-      console.log(arr);
-
+function twodconcat(arr){
+      var arr1 = [];
+      for (var i = 0; i < arr.length; i++) {
+        for (var c = 0; c < arr[i].length; c++) {
+          arr1.push(arr[i][c]);
+        }
+      }
+      return arr1;
+    }
+    console.log(twodconcat([['Andy'], ['Melo']]));
 10.Write a functions which, given a 2-d array and another value x, returns true if x is present in the two d array, and false otherwise.
 function containsElement(arr, x){
   for (var arr = 0; arr < x.length; arr++) {
@@ -56,11 +60,17 @@ E = [[1,2], [2,3], [4,5], [2,4], [1,5]  ]
 ----foto
 
 13.Given the following adjacency Matrix, determine whether the graph is directed or undirected and draw it.
-
+M = [
+  [0,0,1,0,1],
+  [0,0,0,0,1],
+  [0,1,0,0,0],
+  [0,1,0,0,0],
+  [0,0,0,0,1],
+]
 -----foto
 
 14.For exercises 9 and 10, if you assume that n is the size of one side of the matrix, what is the time complexity (Big Oh) of the algorithms you wrote?
-
+O(n^2)
 
 15.Make your Graph Theory Game nice-looking. Publish it to fvi-grad.
 
