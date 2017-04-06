@@ -70,7 +70,7 @@ M = [
   [0,1,0,0,0],
   [0,0,0,0,1],
 ]
------foto
+-----is directed
 
 14.For exercises 9 and 10, if you assume that n is the size of one side of the matrix, what is the time complexity (Big Oh) of the algorithms you wrote?
 O(n^2)
