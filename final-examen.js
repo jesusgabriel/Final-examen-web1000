@@ -44,12 +44,15 @@ function twodconcat(arr){
     console.log(twodconcat([['Andy'], ['Melo']]));
 10.Write a functions which, given a 2-d array and another value x, returns true if x is present in the two d array, and false otherwise.
 function containsElement(arr, x){
-  for (var arr = 0; arr < x.length; arr++) {
-    for (var i = 0; i < x[arr].length; i++) {
-      console.log(x);
+  for (var i = 0; i<arr.length; i++) {
+    for (var b = 0; b < arr[i].length; b++) {
+        if (arr[i][b] ===x) {
+          return true;
+        }
     }
   }
-}
+  return false;
+};
 
 11.What is the relationship between html, the $scope construct, and angular expressions? (Expressions are the ones that are written like so: {{quote}} ).
 ------ relationships between them, you construct will manage the data of your application as part of a variable it will define, $scope,HTML vocabulary Angular provides is the use of Angular expressions.
